@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yn.user.rentacar.controller.managerList">
+
+    <Button
+        android:id="@+id/button_addcar"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:text="add a manager"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/manager_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dip"
+        android:layout_marginEnd="8dip"
+        android:layout_marginStart="8dip"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:choiceMode="singleChoice"
+        android:drawSelectorOnTop="false"
+        android:horizontalSpacing="5dp"
+        android:listSelector="@drawable/rounded_list_selector"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_addcar" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fabEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fabEdit"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fab"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/MKLoader"
+        android:layout_width="250dip"
+        android:layout_height="250dip"
+        android:layout_marginBottom="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/manager_listview"
+        app:layout_constraintEnd_toEndOf="@+id/manager_listview"
+        app:layout_constraintStart_toStartOf="@+id/manager_listview"
+        app:layout_constraintTop_toTopOf="@+id/manager_listview"
+        app:layout_constraintVertical_bias="0.501"
+        app:mk_color="@color/colorAccent"
+        app:mk_type="ClassicSpinner" />
+</android.support.constraint.ConstraintLayout>

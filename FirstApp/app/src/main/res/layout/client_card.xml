@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+
+    android:layoutDirection="ltr"
+    android:padding="5dp">
+
+   <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       card_view:cardBackgroundColor="@android:color/darker_gray"
+       card_view:cardCornerRadius="30dp"
+       card_view:cardElevation="10dp"
+       card_view:contentPadding="0dp">
+
+      <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/client_card_view"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+
+          card_view:cardBackgroundColor="@android:color/background_dark"
+          card_view:cardCornerRadius="30dp"
+          card_view:cardElevation="0dp"
+          card_view:cardUseCompatPadding="true"
+          card_view:contentPadding="15dp">
+
+         <android.support.constraint.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/client_avatarImage"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                card_view:srcCompat="@drawable/avatar1" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent">
+
+               <TableRow
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                     <TextView
+                         android:id="@+id/client_firstname"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         android:text="FName"
+                         android:textColor="@android:color/holo_orange_dark" />
+
+                     <TextView
+                         android:id="@+id/client_lastname"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:layout_marginLeft="10dp"
+                         android:gravity="center"
+                         android:text="LName"
+                         android:textColor="@android:color/holo_orange_dark" />
+                  </LinearLayout>
+               </TableRow>
+
+               <TableRow
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:layout_weight="1"
+                   android:gravity="center">
+
+                  <TextView
+                      android:id="@+id/client_email"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:text="Email"
+                      android:textColor="@android:color/holo_orange_dark" />
+               </TableRow>
+
+               <TableRow
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:gravity="bottom">
+
+                  <TextView
+                      android:id="@+id/client_phone"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center"
+                      android:gravity="center"
+                      android:text="Phone"
+                      android:textColor="@android:color/holo_orange_dark" />
+
+               </TableRow>
+            </TableLayout>
+
+         </android.support.constraint.ConstraintLayout>
+      </android.support.v7.widget.CardView>
+   </android.support.v7.widget.CardView>
+
+   <!-- <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:card="20dp"
+        card_view:cardBackgroundColor="@color/cardview_dark_background"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="10dp">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cars_name_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/holo_blue_dark"
+                card_view:layout_constraintEnd_toEndOf="@+id/tableLayout"
+                card_view:layout_constraintStart_toStartOf="@+id/tableLayout"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                card_view:srcCompat="@drawable/ic_car_placeholder"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toEndOf="@+id/imageView3"
+                card_view:layout_constraintTop_toBottomOf="@+id/cars_name_description">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_menu_slideshow" />
+
+                    <TextView
+                        android:id="@+id/cars_numofseats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cardview_light_background"
+                        card_view:srcCompat="@drawable/ic_menu_camera"
+                        tools:layout_editor_absoluteX="195dp"
+                        tools:layout_editor_absoluteY="46dp" />
+
+                    <TextView
+                        android:id="@+id/cars_transmition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@android:drawable/btn_star" />
+
+                    <TextView
+                        android:id="@+id/cars_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:id="@+id/cars_engineCapacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>-->
+</LinearLayout>

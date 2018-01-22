@@ -1,0 +1,129 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tableLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/car_start">
+
+
+    <Button
+        android:id="@+id/showallCars"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="Cars Depaertment"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/showallClientButton"
+        app:layout_constraintEnd_toEndOf="@+id/showallClientButton"
+        app:layout_constraintStart_toStartOf="@+id/showallClientButton"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="170dp"
+        tools:layout_conversion_absoluteWidth="170dp" />
+
+    <Button
+        android:id="@+id/showallmanagers"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="Managers Department"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/showAllCarModels"
+        app:layout_constraintEnd_toEndOf="@+id/showAllCarModels"
+        app:layout_constraintStart_toStartOf="@+id/showAllCarModels"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="170dp"
+        tools:layout_conversion_absoluteWidth="170dp" />
+
+
+    <Button
+        android:id="@+id/showallClientButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="clients department"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/showAllBranches"
+        app:layout_constraintEnd_toEndOf="@+id/showAllBranches"
+        app:layout_constraintEnd_toStartOf="@+id/showAllCarModels"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showallCars"
+        tools:layout_conversion_absoluteHeight="170dp"
+        tools:layout_conversion_absoluteWidth="170dp" />
+
+
+    <Button
+        android:id="@+id/showAllCarModels"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="car models departments"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/showallClientButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/showallClientButton"
+        app:layout_constraintTop_toTopOf="@+id/showallClientButton"
+        tools:layout_conversion_absoluteHeight="170dp"
+        tools:layout_conversion_absoluteWidth="170dp" />
+
+
+    <Button
+        android:id="@+id/showAllBranches"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="onClick"
+        android:text="brances departments"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/logouot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showallClientButton"
+        tools:layout_conversion_absoluteHeight="170dp"
+        tools:layout_conversion_absoluteWidth="170dp" />
+
+    <Button
+        android:id="@+id/logouot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/colorAccent"
+        android:drawableLeft="@drawable/ic_logout"
+        android:onClick="onClick"
+        android:text="log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="175dp" />
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+
+    android:layoutDirection="ltr">
+
+   <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+       android:id="@+id/card_view"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:layout_gravity="center"
+
+
+       android:layout_margin="10dip"
+       card_view:cardBackgroundColor="@color/cardview_dark_background"
+       card_view:cardCornerRadius="20dip"
+       card_view:cardElevation="10dip"
+       card_view:contentPadding="10dip">
+
+      <android.support.constraint.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <TextView
+             android:id="@+id/cars_name_description"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="8dp"
+             android:layout_marginStart="8dp"
+             android:text="TextView"
+             android:textColor="@android:color/holo_blue_dark"
+             card_view:layout_constraintEnd_toEndOf="parent"
+             card_view:layout_constraintStart_toStartOf="parent"
+             card_view:layout_constraintTop_toTopOf="parent" />
+
+         <ImageView
+             android:id="@+id/cars_carImage"
+             android:layout_width="253dp"
+             android:layout_height="125dip"
+             android:layout_marginBottom="8dp"
+             android:layout_marginStart="8dp"
+             android:layout_marginTop="4dp"
+             android:adjustViewBounds="true"
+             android:cropToPadding="true"
+             card_view:layout_constraintBottom_toBottomOf="parent"
+             card_view:layout_constraintEnd_toEndOf="parent"
+             card_view:layout_constraintHorizontal_bias="0.5"
+             card_view:layout_constraintStart_toEndOf="@+id/tableLayout"
+             card_view:layout_constraintTop_toBottomOf="@+id/cars_name_description"
+             card_view:srcCompat="@drawable/ic_car_placeholder" />
+
+         <TableLayout
+             android:id="@+id/tableLayout"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="8dp"
+             android:layout_marginTop="8dp"
+             card_view:layout_constraintBottom_toBottomOf="parent"
+             card_view:layout_constraintEnd_toStartOf="@+id/cars_carImage"
+             card_view:layout_constraintHorizontal_bias="0.5"
+             card_view:layout_constraintStart_toStartOf="parent"
+             card_view:layout_constraintTop_toBottomOf="@+id/cars_name_description">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start">
+
+               <ImageView
+                   android:id="@+id/imageView7"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   card_view:srcCompat="@drawable/ic_063_seat" />
+
+               <TextView
+                   android:id="@+id/cars_numofseats"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical|start"
+                   android:gravity="start"
+                   android:text="TextView"
+                   android:textColor="@android:color/holo_blue_dark"
+                   android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start">
+
+               <ImageView
+                   android:id="@+id/imageView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/cardview_light_background"
+                   card_view:srcCompat="@drawable/ic_014_gearshift_1"
+                   tools:layout_editor_absoluteX="195dp"
+                   tools:layout_editor_absoluteY="46dp" />
+
+               <TextView
+                   android:id="@+id/cars_transmition"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical|start"
+                   android:text="TextView"
+                   android:textColor="@android:color/holo_blue_dark"
+                   android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|start">
+
+               <ImageView
+                   android:id="@+id/imageView5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   card_view:srcCompat="@drawable/ic_061_car" />
+
+               <TextView
+                   android:id="@+id/cars_class"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical|start"
+                   android:gravity="start"
+                   android:text="TextView"
+                   android:textColor="@android:color/holo_blue_dark"
+                   android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|start">
+
+               <ImageView
+                   android:id="@+id/imageView6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   card_view:srcCompat="@drawable/ic_031_engine" />
+
+               <TextView
+                   android:id="@+id/cars_engineCapacity"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical|start"
+                   android:text="TextView"
+                   android:textColor="@android:color/holo_blue_dark"
+                   android:textStyle="bold" />
+            </TableRow>
+         </TableLayout>
+      </android.support.constraint.ConstraintLayout>
+   </android.support.v7.widget.CardView>
+   <!-- <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:card="20dp"
+        card_view:cardBackgroundColor="@color/cardview_dark_background"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="10dp">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cars_name_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@android:color/holo_blue_dark"
+                card_view:layout_constraintEnd_toEndOf="@+id/tableLayout"
+                card_view:layout_constraintStart_toStartOf="@+id/tableLayout"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                card_view:srcCompat="@drawable/ic_car_placeholder"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.0"
+                card_view:layout_constraintStart_toEndOf="@+id/imageView3"
+                card_view:layout_constraintTop_toBottomOf="@+id/cars_name_description">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_menu_slideshow" />
+
+                    <TextView
+                        android:id="@+id/cars_numofseats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|start">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/cardview_light_background"
+                        card_view:srcCompat="@drawable/ic_menu_camera"
+                        tools:layout_editor_absoluteX="195dp"
+                        tools:layout_editor_absoluteY="46dp" />
+
+                    <TextView
+                        android:id="@+id/cars_transmition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@android:drawable/btn_star" />
+
+                    <TextView
+                        android:id="@+id/cars_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|start">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_menu_gallery" />
+
+                    <TextView
+                        android:id="@+id/cars_engineCapacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold" />
+                </TableRow>
+            </TableLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>-->
+</RelativeLayout>

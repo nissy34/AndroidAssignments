@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+        <item android:title="Order by:">
+            <menu>
+                <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_branches"
+                    android:icon="@drawable/ic_branch_menu"
+                    android:title="Branches" />
+                <item
+                    android:id="@+id/nav_car_models"
+                    android:icon="@drawable/ic_car_menu"
+                    android:title="Car models" />
+                </group>
+
+            </menu>
+        </item>
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_open_orders"
+                android:icon="@drawable/ic_order_open"
+                android:title="Open orders" />
+            <item
+                 android:id="@+id/nav_closed_orders"
+                 android:icon="@drawable/ic_order_history"
+                 android:title="closed orders" />
+            <item
+                android:id="@+id/nav_edit_profile"
+                android:icon="@drawable/ic_edit"
+                android:title="Edit profile" />
+            </group>
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_login"
+                android:title="Log out" />
+
+        </menu>
+    </item>
+    <item android:title="Us:">
+        <menu>
+            <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_phone"
+                android:title="Call us" />
+            </group>
+            <item
+                android:id="@+id/nav_email"
+                android:icon="@drawable/ic_email"
+                android:title="Email us" />
+        </menu>
+    </item>
+
+</menu>

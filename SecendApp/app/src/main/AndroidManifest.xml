@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yn.user.cliantapplication">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_rent_a_car"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_rent_a_car"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+
+
+        <receiver
+            android:name=".model.backend.updateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_LOW" />
+                <action android:name="com.model.backend.UPDATE" />
+            </intent-filter>
+        </receiver>
+
+
+    <activity android:name=".controller.MainActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".controller.LoginActivity"
+            android:label="Sign in"/>
+        <activity
+            android:name=".controller.RegisterClient"
+
+            android:label="Register"/>
+
+        <service android:name=".model.backend.updateService"
+                 android:exported="false"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+
+
+
+        <activity
+            android:name=".controller.StartActivity"
+            android:label="RentACar client">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
