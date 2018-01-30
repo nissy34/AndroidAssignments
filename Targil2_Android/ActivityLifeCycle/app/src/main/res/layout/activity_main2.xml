@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:drawable/screen_background_light_transparent"
     tools:context="com.example.nissy304929995_yuval305302937.activitylifecycle.Main2Activity">
 
 </android.support.constraint.ConstraintLayout>

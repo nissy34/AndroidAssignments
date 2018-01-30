@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -19,8 +20,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Toast.makeText(this, "onCreate()",Toast.LENGTH_SHORT).show();
         android.util.Log.d(ACTIVITY_LIFE_TAG , "onCreate()");
-        Intent intent = new Intent(this, Main2Activity.class);
-        startActivity(intent);
+
     }
 
     @Override
@@ -74,4 +74,8 @@ public class MainActivity extends Activity {
     }
 
 
+    public void aaa(View view) {
+        Intent intent = new Intent(this, Main2Activity.class);
+        startActivity(intent);
+    }
 }

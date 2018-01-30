@@ -33,8 +33,10 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+
         android.util.Log.d(ACTIVITY_LIFE_TAG , "onResume()");
         Toast.makeText(this, "onResume2()",Toast.LENGTH_SHORT).show();
+        finish();
 
     }
 

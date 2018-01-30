@@ -31,30 +31,7 @@ public class updateService extends Service {
         Log.d(TAG, "onCreate");
 
         Toast.makeText(this, "start service", Toast.LENGTH_SHORT).show();
-        Thread t = new Thread() {
-            @Override
-            public void run() {
 
-                while (true) {
-                    try {
-                        Thread.sleep(AppContract.TIMEINTERVAL*1000);
-                        Log.d(TAG, "thread run ..");
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                   if (DBManagerFactory.getManager().orderClosedIn10sec()) {
-                        Log.d(TAG, "isUpdatet run ..");
-                        Intent intent1 = new Intent("com.model.backend.UPDATE");
-                        updateService.this.sendBroadcast(intent1);
-
-                    //sendBroadcast(intent);
-                   }
-
-                }
-            }
-        };
-
-        t.start();
 
 
     }
@@ -80,6 +57,30 @@ public class updateService extends Service {
         if (!ServiceRun) {
             ServiceRun = true;
             Toast.makeText(this, "run service", Toast.LENGTH_LONG).show();
+            Thread t = new Thread() {
+                @Override
+                public void run() {
+
+                    while (true) {
+                        try {
+                            Thread.sleep(AppContract.TIMEINTERVAL*1000);
+                            Log.d(TAG, "thread run ..");
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        if (DBManagerFactory.getManager().orderClosedIn10sec()) {
+                            Log.d(TAG, "isUpdatet run ..");
+                            Intent intent1 = new Intent("com.model.backend.UPDATE");
+                            updateService.this.sendBroadcast(intent1);
+
+                            //sendBroadcast(intent);
+                        }
+
+                    }
+                }
+            };
+
+            t.start();
             return START_STICKY;
         }
 

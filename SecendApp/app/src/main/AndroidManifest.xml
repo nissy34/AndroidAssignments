@@ -16,13 +16,13 @@
         android:theme="@style/AppTheme">
 
 
-        <receiver
+       <!-- <receiver
             android:name=".model.backend.updateReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BATTERY_LOW" />
                 <action android:name="com.model.backend.UPDATE" />
             </intent-filter>
-        </receiver>
+        </receiver>-->
 
 
     <activity android:name=".controller.MainActivity"

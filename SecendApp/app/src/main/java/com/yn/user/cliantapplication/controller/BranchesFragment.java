@@ -70,6 +70,7 @@ public class  BranchesFragment extends Fragment {
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     private void buildAdapter() {
         new AsyncTask<Void, Void, BranchesExpandableListAdapter>() {
             @Override
